@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/restaurants',[\App\Http\Controllers\RestaurantsController::class,'index']);
+//Route::get('/login',[\App\Http\Controllers\RestaurantsController::class,'index'])->name('login');
