@@ -23,6 +23,7 @@ class CreateStaffTable extends Migration
         });
     }
 
+
     /**
      * Reverse the migrations.
      *
