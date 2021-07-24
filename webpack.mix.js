@@ -18,5 +18,8 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/bootstrap.min.css', 'public/css', [])
     .postCss('resources/css/font-awesome.min.css', 'public/css', [])
     .postCss('resources/css/animate.min.css', 'public/css', [])
+    .postCss('resources/css/simple-line-icons.css', 'public/css', [])
+    .postCss('resources/css/fullcalendar.min.css', 'public/css', [])
+    .js('resources/js/main.js', 'public/js')
     .copyDirectory('resources/img', 'public/images')
 ;
