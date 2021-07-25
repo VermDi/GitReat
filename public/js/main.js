@@ -1,15 +1,15 @@
 /******/ (() => { // webpackBootstrap
-let __webpack_exports__ = {};
+var __webpack_exports__ = {};
 /*!******************************!*\
   !*** ./resources/js/main.js ***!
   \******************************/
 (function (jQuery) {
-  // letiable
-  let $ = jQuery;
+  // Variable
+  var $ = jQuery;
 
   $.fn.ripple = function () {
     $(this).click(function (e) {
-      let rippler = $(this),
+      var rippler = $(this),
           ink = rippler.find(".ink");
 
       if (rippler.find(".ink").length === 0) {
@@ -19,15 +19,15 @@ let __webpack_exports__ = {};
       ink.removeClass("animate");
 
       if (!ink.height() && !ink.width()) {
-        let d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+        var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
         ink.css({
           height: d,
           width: d
         });
       }
 
-      let x = e.pageX - rippler.offset().left - ink.width() / 2;
-      let y = e.pageY - rippler.offset().top - ink.height() / 2;
+      var x = e.pageX - rippler.offset().left - ink.width() / 2;
+      var y = e.pageY - rippler.offset().top - ink.height() / 2;
       ink.css({
         top: y + 'px',
         left: x + 'px'
@@ -37,9 +37,9 @@ let __webpack_exports__ = {};
 
   $.fn.carouselAnimate = function () {
     function doAnimations(elems) {
-      let animEndEv = 'webkitAnimationEnd animationend';
+      var animEndEv = 'webkitAnimationEnd animationend';
       elems.each(function () {
-        let $this = $(this),
+        var $this = $(this),
             $animationType = $this.data('animation');
         $this.addClass($animationType).one(animEndEv, function () {
           $this.removeClass($animationType);
@@ -47,12 +47,12 @@ let __webpack_exports__ = {};
       });
     }
 
-    let $myCarousel = this;
-    let $firstAnimatingElems = $myCarousel.find('.item:first').find('[data-animation ^= "animated"]');
+    var $myCarousel = this;
+    var $firstAnimatingElems = $myCarousel.find('.item:first').find('[data-animation ^= "animated"]');
     doAnimations($firstAnimatingElems);
     $myCarousel.carousel('pause');
     $myCarousel.on('slide.bs.carousel', function (e) {
-      let $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
+      var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
       doAnimations($animatingElems);
     });
   };
@@ -65,7 +65,7 @@ let __webpack_exports__ = {};
   this.treeMenu = function () {
     $('.tree-toggle').click(function (e) {
       e.preventDefault();
-      let $this = $(this).parent().children('ul.tree');
+      var $this = $(this).parent().children('ul.tree');
       $(".tree").not($this).slideUp(600);
       $this.toggle(700);
       $(".tree").not($this).parent("li").find(".tree-toggle .right-arrow").removeClass("fa-angle-down").addClass("fa-angle-right");
@@ -73,7 +73,7 @@ let __webpack_exports__ = {};
     });
     $('.sub-tree-toggle').click(function (e) {
       e.preventDefault();
-      let $this = $(this).parent().children('ul.sub-tree');
+      var $this = $(this).parent().children('ul.sub-tree');
       $(".sub-tree").not($this).slideUp(600);
       $this.toggle(700);
       $(".sub-tree").not($this).parent("li").find(".sub-tree-toggle .right-arrow").removeClass("fa-angle-down").addClass("fa-angle-right");
@@ -190,7 +190,7 @@ let __webpack_exports__ = {};
   });
   $('.carousel-thumb').on('slid.bs.carousel', function () {
     if ($(this).find($(".item")).is(".active")) {
-      let Current = $(this).find($(".item.active")).attr("data-slide");
+      var Current = $(this).find($(".item.active")).attr("data-slide");
       $(".carousel-thumb-img li img").removeClass("animated rubberBand");
       $(".carousel-thumb-img li").removeClass("active");
       $($(".carousel-thumb-img").children()[Current]).addClass("active");
@@ -204,26 +204,26 @@ let __webpack_exports__ = {};
   });
   $("#mimin-mobile-menu-opener").on("click", function (e) {
     $("#mimin-mobile").toggleClass("reverse");
-    let rippler = $("#mimin-mobile");
+    var rippler = $("#mimin-mobile");
 
     if (!rippler.hasClass("reverse")) {
       if (rippler.find(".ink").length == 0) {
         rippler.append("<div class='ink'></div>");
       }
 
-      let ink = rippler.find(".ink");
+      var ink = rippler.find(".ink");
       ink.removeClass("animate");
 
       if (!ink.height() && !ink.width()) {
-        let d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+        var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
         ink.css({
           height: d,
           width: d
         });
       }
 
-      let x = e.pageX - rippler.offset().left - ink.width() / 2;
-      let y = e.pageY - rippler.offset().top - ink.height() / 2;
+      var x = e.pageX - rippler.offset().left - ink.width() / 2;
+      var y = e.pageY - rippler.offset().top - ink.height() / 2;
       ink.css({
         top: y + 'px',
         left: x + 'px'
@@ -246,19 +246,19 @@ let __webpack_exports__ = {};
         rippler.append("<div class='ink'></div>");
       }
 
-      let ink = rippler.find(".ink");
+      var ink = rippler.find(".ink");
       ink.removeClass("animate");
 
       if (!ink.height() && !ink.width()) {
-        let d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+        var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
         ink.css({
           height: d,
           width: d
         });
       }
 
-      let x = e.pageX - rippler.offset().left - ink.width() / 2;
-      let y = e.pageY - rippler.offset().top - ink.height() / 2;
+      var x = e.pageX - rippler.offset().left - ink.width() / 2;
+      var y = e.pageY - rippler.offset().top - ink.height() / 2;
       ink.css({
         top: y + 'px',
         left: x + 'px'
@@ -297,8 +297,8 @@ let __webpack_exports__ = {};
     autohidemode: "hidden"
   });
   $(".fileupload-v1-btn").on("click", function () {
-    let wrapper = $(this).parent("span").parent("div");
-    let path = wrapper.find($(".fileupload-v1-path"));
+    var wrapper = $(this).parent("span").parent("div");
+    var path = wrapper.find($(".fileupload-v1-path"));
     $(".fileupload-v1-file").click();
     $(".fileupload-v1-file").on("change", function () {
       path.attr("placeholder", $(this).val());
@@ -306,10 +306,10 @@ let __webpack_exports__ = {};
       console.log(path);
     });
   });
-  let datetime = null,
+  var datetime = null,
       date = null;
 
-  let update = function update() {
+  var update = function update() {
     date = moment(new Date());
     datetime.html(date.format('HH:mm'));
     datetime2.html(date.format('dddd, MMMM Do YYYY'));

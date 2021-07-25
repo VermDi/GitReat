@@ -1,6 +1,11 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/main.js": "/js/main.js",
+    "/css/fullcalendar.min.css": "/css/fullcalendar.min.css",
+    "/css/animate.min.css": "/css/animate.min.css",
+    "/css/font-awesome.min.css": "/css/font-awesome.min.css",
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
+    "/css/app.css": "/css/app.css",
     "/images/404.png": "/images/404.png",
     "/images/500.png": "/images/500.png",
     "/images/avatar.jpg": "/images/avatar.jpg",
