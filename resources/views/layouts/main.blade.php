@@ -14,12 +14,11 @@
 
     <!-- plugins -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-{{--     <link rel="stylesheet" type="text/css" href="css/simple-line-icons.css"/>--}}
+    <link rel="stylesheet" type="text/css" href="css/simple-line-icons.css"/>
     <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/fullcalendar.min.css"/>
     <link href="css/app.css" rel="stylesheet">
     <!-- end: Css -->
-
     <link rel="shortcut icon" href="images/logomi.png">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,7 +36,7 @@
                 <span class="bottom"></span>
             </div>
             <a href="index.php" class="navbar-brand">
-                <b>MIMIN</b>
+                <b>GitRestaurants</b>
             </a>
 
             <ul class="nav navbar-nav search-nav">
@@ -87,6 +86,7 @@
                     <div class="left-bg"></div>
                 </li>
                 <li class="time">
+
                     <h1 class="animated fadeInLeft">21:00</h1>
                     <p class="animated fadeInRight">Sat,October 1st 2029</p>
                 </li>
@@ -118,6 +118,6 @@
         @yield('content')
     </div>
 </div>
-
+<script src="js/app.js"></script>
 </body>
 </html>
