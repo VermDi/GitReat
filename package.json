@@ -11,12 +11,13 @@
     },
     "devDependencies": {
         "axios": "^0.21",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
+        "bootstrap": "4.6.0",
         "jquery": "2.1.4",
         "jquery-ui": "^1.12.1",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "moment": "^2.29.1",
         "nicescroll": "^3.7.4",
-        "bootstrap": "4.6.0"
+        "postcss": "^8.1.14"
     }
 }

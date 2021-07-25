@@ -1,18 +1,11 @@
 {
     "/js/app.js": "/js/app.js",
-<<<<<<< HEAD
-    "/js/main.js": "/js/main.js",
-=======
->>>>>>> d2547c54954c121b5fdec38dc7d3f35aae41d702
     "/css/fullcalendar.min.css": "/css/fullcalendar.min.css",
     "/css/animate.min.css": "/css/animate.min.css",
     "/css/font-awesome.min.css": "/css/font-awesome.min.css",
     "/css/bootstrap.min.css": "/css/bootstrap.min.css",
     "/css/app.css": "/css/app.css",
-<<<<<<< HEAD
-=======
     "/css/simple-line-icons.css": "/css/simple-line-icons.css",
->>>>>>> d2547c54954c121b5fdec38dc7d3f35aae41d702
     "/images/404.png": "/images/404.png",
     "/images/500.png": "/images/500.png",
     "/images/avatar.jpg": "/images/avatar.jpg",
