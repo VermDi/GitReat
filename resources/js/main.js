@@ -30,33 +30,33 @@
         });
     };
 
-    $.fn.carouselAnimate = function()
-    {
-        function doAnimations(elems)
-        {
-          var animEndEv = 'webkitAnimationEnd animationend';
-
-          elems.each(function () {
-            var $this = $(this),
-            $animationType = $this.data('animation');
-            $this.addClass($animationType).one(animEndEv, function () {
-              $this.removeClass($animationType);
-            });
-          });
-        }
-
-        var $myCarousel          = this;
-        var $firstAnimatingElems = $myCarousel.find('.item:first')
-                                              .find('[data-animation ^= "animated"]');
-
-        doAnimations($firstAnimatingElems);
-        $myCarousel.carousel('pause');
-        $myCarousel.on('slide.bs.carousel', function (e) {
-          var $animatingElems = $(e.relatedTarget)
-          .find("[data-animation ^= 'animated']");
-          doAnimations($animatingElems);
-        });
-    };
+    // $.fn.carouselAnimate = function()
+    // {
+    //     function doAnimations(elems)
+    //     {
+    //       var animEndEv = 'webkitAnimationEnd animationend';
+    //
+    //       elems.each(function () {
+    //         var $this = $(this),
+    //         $animationType = $this.data('animation');
+    //         $this.addClass($animationType).one(animEndEv, function () {
+    //           $this.removeClass($animationType);
+    //         });
+    //       });
+    //     }
+    //
+    //     var $myCarousel          = this;
+    //     var $firstAnimatingElems = $myCarousel.find('.item:first')
+    //                                           .find('[data-animation ^= "animated"]');
+    //
+    //     doAnimations($firstAnimatingElems);
+    //     $myCarousel.carousel('pause');
+    //     $myCarousel.on('slide.bs.carousel', function (e) {
+    //       var $animatingElems = $(e.relatedTarget)
+    //       .find("[data-animation ^= 'animated']");
+    //       doAnimations($animatingElems);
+    //     });
+    // };
 
 
     this.hide = function()
@@ -290,17 +290,17 @@
     $('.mail-wrapper').find('.mail-left').css('height', $('.mail-wrapper').innerHeight());
     $("#left-menu ul li a").ripple();
     $(".ripple div").ripple();
-    $("#carousel-example3").carouselAnimate();
-    $("#left-menu .sub-left-menu").niceScroll();
-     $(".sub-mimin-mobile-menu-list").niceScroll({
-            touchbehavior:true,
-            cursorcolor:"#FF00FF",
-            cursoropacitymax:0.6,
-            cursorwidth:24,
-            usetransition:true,
-            hwacceleration:true,
-            autohidemode:"hidden"
-        });
+    // $("#carousel-example3").carouselAnimate();
+    // $("#left-menu .sub-left-menu").niceScroll();
+    //  $(".sub-mimin-mobile-menu-list").niceScroll({
+    //         touchbehavior:true,
+    //         cursorcolor:"#FF00FF",
+    //         cursoropacitymax:0.6,
+    //         cursorwidth:24,
+    //         usetransition:true,
+    //         hwacceleration:true,
+    //         autohidemode:"hidden"
+    //     });
 
     $(".fileupload-v1-btn").on("click",function(){
       var wrapper = $(this).parent("span").parent("div");
@@ -330,7 +330,7 @@
     });
 
 
-    $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+    // $("body").tooltip({ selector: '[data-toggle=tooltip]' });
     leftMenu();
     rightMenu();
     treeMenu();

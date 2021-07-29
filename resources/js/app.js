@@ -1,3 +1,4 @@
 require('./bootstrap');
-
-require('alpinejs');
+require('./icheck.min')
+require('./main')
+// require('./jquery.nicescroll')

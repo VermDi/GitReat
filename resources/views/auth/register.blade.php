@@ -1,59 +1,45 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('layouts.auth')
+@section('content')
+    <form class="form-signin" method="post" action="{{ route('register') }}">
+        @csrf
+        <div class="panel periodic-login">
+            <span class="atomic-number"></span>
+            <div class="panel-body text-center">
+                <h1 class="atomic-symbol">Mi</h1>
+                <p class="atomic-mass">14.072110</p>
+                <p class="element-name">Miminium</p>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
-
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <i class="icons icon-arrow-down"></i>
+                <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                    <x-input id="name" type="text" class="form-text" name="name" :value="old('name')" required autofocus/>
+                    <span class="bar"></span>
+                    <label>Username</label>
+                </div>
+                <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                    <x-input id="email" class="form-text" type="email" name="email" :value="old('email')" required/>
+                    <span class="bar"></span>
+                    <label>E-mail</label>
+                </div>
+                <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                    <x-input id="password" type="password" class="form-text" name="password" required autocomplete="new-password"/>
+                    <span class="bar"></span>
+                    <label>Password</label>
+                </div>
+                <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                    <x-input id="password_confirmation" type="password" class="form-text" name="password_confirmation" required />
+                    <span class="bar"></span>
+                    <label>Password</label>
+                </div>
+                <label class="pull-left">
+                    <input type="checkbox" class="icheck pull-left" name="checkbox1"/> Remember me
+                </label>
+                <input type="submit" class="btn col-md-12" value="Вход "/>
             </div>
-
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+            <div class="text-center" style="padding:5px;">
+                <a href="forgotpass.php">Forgot Password </a>
+                <a href="{{ route('login') }}">| Signup</a>
             </div>
+        </div>
+    </form>
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+@endsection
