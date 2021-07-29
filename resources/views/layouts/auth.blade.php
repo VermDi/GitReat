@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/simple-line-icons.css"/>
     <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fullcalendar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/aero.css"/>
     <link href="css/app.css" rel="stylesheet">
     <!-- end: Css -->
     <link rel="shortcut icon" href="images/logomi.png">
@@ -29,38 +29,7 @@
 <body id="mimin" class="dashboard form-signin-wrapper">
 
 <div class="container">
-
-    <form class="form-signin">
-        <div class="panel periodic-login">
-            <span class="atomic-number"></span>
-            <div class="panel-body text-center">
-                <h1 class="atomic-symbol">Mi</h1>
-                <p class="atomic-mass">14.072110</p>
-                <p class="element-name">Miminium</p>
-
-                <i class="icons icon-arrow-down"></i>
-                <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="text" class="form-text" required>
-                    <span class="bar"></span>
-                    <label>Username</label>
-                </div>
-                <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="password" class="form-text" required>
-                    <span class="bar"></span>
-                    <label>Password</label>
-                </div>
-                <label class="pull-left">
-                    <input type="checkbox" class="icheck pull-left" name="checkbox1"/> Remember me
-                </label>
-                <input type="submit" class="btn col-md-12" value="SignIn"/>
-            </div>
-            <div class="text-center" style="padding:5px;">
-                <a href="forgotpass.php">Forgot Password </a>
-                <a href="reg.php">| Signup</a>
-            </div>
-        </div>
-    </form>
-
+    @yield('content')
 </div>
 
 <!-- end: Content -->
