@@ -35,7 +35,7 @@
                 <span class="middle"></span>
                 <span class="bottom"></span>
             </div>
-            <a href="index.php" class="navbar-brand">
+            <a href="{{route('index')}}" class="navbar-brand">
                 <b>GitRest-Admin</b>
             </a>
 
@@ -101,7 +101,7 @@
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                     </a>
                     <ul class="nav nav-list tree">
-                        <li><a href="/restaurants">Список</a></li>
+                        <li><a href="{{route('list-user')}}">Список</a></li>
                         <li><a href="dashboard-v1.php">Форма добавления </a></li>
                         <li><a href="dashboard-v1.php">Статистика</a></li>
 

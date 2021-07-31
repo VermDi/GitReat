@@ -33,7 +33,7 @@
                 <label class="pull-left">
                     <input type="checkbox" class="icheck pull-left" name="checkbox1"/> Remember me
                 </label>
-                <input type="submit" class="btn col-md-12" value="Вход "/>
+                <input type="submit" class="btn col-md-12" value="Регистрация"/>
             </div>
             <div class="text-center" style="padding:5px;">
                 <a href="forgotpass.php">Forgot Password </a>

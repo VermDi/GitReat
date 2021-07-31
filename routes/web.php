@@ -15,10 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware('auth');
+})->middleware('auth')
+->name('index');
+
+Route::get('/list-user', [\App\Http\Controllers\UsersController::class,'index']
+)->name('list-user');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth'])
+    ->name('dashboard');
 
 require __DIR__ . '/auth.php';
