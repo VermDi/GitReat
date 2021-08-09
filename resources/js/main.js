@@ -335,4 +335,8 @@
     rightMenu();
     treeMenu();
     hide();
+
+    $(document).ready(function(){
+        $('#datatables-example').DataTable();
+    });
 })(jQuery);

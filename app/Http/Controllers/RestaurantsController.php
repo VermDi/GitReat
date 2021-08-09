@@ -8,11 +8,8 @@ use App\Models\Restaurant;
 
 class RestaurantsController extends Controller
 {
-
     public function index()
     {
-        $restaurants = Restaurant::all();
-        return view('list', ['restaurants' => $restaurants]);
-
+        return view('restaurants.list-restaurant', ['restaurants' => Restaurant::all()]);
     }
 }

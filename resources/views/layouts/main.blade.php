@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/simple-line-icons.css"/>
     <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/fullcalendar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/datatables.bootstrap.min.css"/>
     <link href="css/app.css" rel="stylesheet">
     <!-- end: Css -->
     <link rel="shortcut icon" href="images/logomi.png">
@@ -113,7 +114,7 @@
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                     </a>
                     <ul class="nav nav-list tree">
-                        <li><a href="dashboard-v1.php">Список Ресторанов</a></li>
+                        <li><a href="{{route('list-restaurants')}}">Список Ресторанов</a></li>
                         <li><a href="dashboard-v1.php">Форма добавления</a></li>
                         <li><a href="dashboard-v2.php">Подробное описание</a></li>
                         <li><a href="dashboard-v2.php">Персонал</a></li>

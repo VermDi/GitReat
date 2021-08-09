@@ -19,6 +19,7 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/animate.min.css', 'public/css', [])
     .postCss('resources/css/simple-line-icons.css', 'public/css', [])
     .postCss('resources/css/aero.css', 'public/css', [])
+    .postCss('resources/css/datatables.bootstrap.min.css', 'public/css', [])
     .copyDirectory('resources/img', 'public/images')
     .copyDirectory('resources/fonts', 'public/fonts')
 ;

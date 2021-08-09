@@ -11,7 +11,7 @@ global.$ = global.jQuery = require('jquery');
 window.moment = require('moment');
 //window.Fullcalendar = require('fullcalendar-scheduler');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
+require('datatables.net');
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

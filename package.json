@@ -23,6 +23,7 @@
         "lodash": "^4.17.19",
         "moment": "^2.29.1",
         "nicescroll": "^3.7.4",
-        "postcss": "^8.1.14"
+        "postcss": "^8.1.14",
+        "datatables.net": "^1.10.25"
     }
 }
