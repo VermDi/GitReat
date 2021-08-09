@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -41,7 +42,29 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function restaurants() {
-        return $this->hasMany(Restaurant::class,'user_id','id');
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function restaurants()
+    {
+        return $this->hasMany(Restaurant::class, 'user_id', 'id');
+    }
+
+    /**
+     * @param $value
+     * @return string
+     */
+    public function getUpdatedAtAttribute($value)
+    {
+        return Carbon::parse($value)->format('d.m.Y H:i:s');
+    }
+
+    public function getCreatedAtAttribute($value)
+    {
+        return Carbon::parse($value)->format('d.m.Y H:i:s');
+    }
+
+    public function getFullNameAttribute(){
+        return $this->name.' ('.$this->email.')';
     }
 }

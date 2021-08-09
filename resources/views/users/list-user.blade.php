@@ -4,10 +4,10 @@
     <div class="col-md-12 top-20 padding-0">
         <div class="col-md-12">
             <div class="panel">
-                <div class="panel-heading ">
+                <div class="panel-heading list-user-panel ">
                     <h3>Список Пользователей</h3>
-                    <a href="{{route('form-user')}}" type="button" class=" btn btn-gradient btn-primary"
-                       value="primary">Добавить пользователя</a>
+                    <div><a href="{{route('form-user')}}" type="button" class=" btn btn-gradient btn-primary"
+                            value="primary">Добавить пользователя</a></div>
                 </div>
                 <div class="panel-body">
                     <div class="responsive-table">
@@ -17,6 +17,7 @@
                             <tr>
                                 <th>Имя</th>
                                 <th>E-mail</th>
+                                <th>Полное Имя</th>
                                 <th>Время создания</th>
                                 <th>Время обновления</th>
                                 <th>Рестораны</th>
@@ -27,7 +28,8 @@
                                 <tr>
                                     <td>{{ $el->name }}</td>
                                     <td>{{ $el->email }}</td>
-                                    <td>{{ $el->created_at }}</td>
+                                    <td>{{ $el->fullName }}</td>
+                                    <td>{{$el->created_at}}</td>
                                     <td>{{ $el->updated_at }}</td>
                                     <td>@foreach($el->restaurants as $restaurant)
                                             {{$restaurant->name}} <br>

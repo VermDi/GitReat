@@ -7950,9 +7950,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
       date = null;
 
   var update = function update() {
+    moment.locale('ru');
     date = moment(new Date());
     datetime.html(date.format('HH:mm'));
-    datetime2.html(date.format('dddd, MMMM Do YYYY'));
+    datetime2.html(date.format('dd, D MMM YYYY'));
   };
 
   $(document).ready(function () {

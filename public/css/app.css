@@ -5480,4 +5480,9 @@ ul li a:focus {
 .form-user-bottom{
     margin-bottom: 15px;
 }
+.list-user-panel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
 

@@ -103,7 +103,6 @@
                     </a>
                     <ul class="nav nav-list tree">
                         <li><a href="{{route('list-user')}}">Список</a></li>
-                        <li><a href="dashboard-v1.php">Форма добавления </a></li>
                         <li><a href="dashboard-v1.php">Статистика</a></li>
 
                     </ul>
